@@ -1,0 +1,6 @@
+{
+  "name": "@dominicvonk/enum",
+  "version": "1.0.4",
+  "license": "MIT",
+  "exports": "./src/main.ts"
+}
