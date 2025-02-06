@@ -1,0 +1,33 @@
+{
+  "name": "enum8",
+  "version": "1.0.0",
+  "description": "The way to create enums in JavaScript and TypeScript",
+  "main": "dist/main.js",
+  "module": "dist/main.js",
+  "type": "module",
+  "types": "dist/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dominicvonk/enum8.git"
+  },
+  "scripts": {
+    "test": "vitest",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "package-lock.json",
+    "README.md"
+  ],
+  "author": "Dominic Vonk",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
+    "typescript": "^5.8.0-beta",
+    "typescript-eslint": "^8.23.0"
+  }
+}
