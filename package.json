@@ -1,6 +1,6 @@
 {
   "name": "enum8",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The way to create enums in JavaScript and TypeScript",
   "main": "dist/main.js",
   "module": "dist/main.js",
