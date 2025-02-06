@@ -4,7 +4,7 @@ type ParseInt<T extends string> = T extends `${number}`
     : never
   : never;
 
-type Inferable<R> = Readonly<R> & { infer: R[keyof R] };
+export type Enumerated<R> = Readonly<R> & { infer: R[keyof R] };
 
 export function enumerate<
   const T extends string[],
@@ -13,23 +13,23 @@ export function enumerate<
       ? `${T[P]}`
       : never]: P extends string ? ParseInt<P> : never;
   }
->(array: T): Inferable<R>;
+>(array: T): Enumerated<R>;
 export function enumerate<
   const T extends Record<string, number>,
   const R extends T
->(record: T): Inferable<R>;
+>(record: T): Enumerated<R>;
 export function enumerate<
   const T extends Record<string, string>,
   const R extends T
->(record: T): Inferable<R>;
+>(record: T): Enumerated<R>;
 export function enumerate<
   const T extends Record<string, string> | Record<string, number> | string[],
   const R extends T extends string[] ? { [P in T[number]]: keyof T } : T
->(record: T): Inferable<R> {
+>(record: T): Enumerated<R> {
   if (Array.isArray(record)) {
     return Object.freeze(
       Object.fromEntries(record.map((key, index) => [key, index]))
-    ) as Inferable<R>;
+    ) as Enumerated<R>;
   }
-  return Object.freeze(record) as Inferable<R>;
+  return Object.freeze(record) as Enumerated<R>;
 }

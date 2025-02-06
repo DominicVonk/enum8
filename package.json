@@ -6,12 +6,19 @@
   "module": "dist/main.js",
   "type": "module",
   "types": "dist/main.d.ts",
+  "keywords": [
+    "enum",
+    "enumerated",
+    "enum8",
+    "enum8.js",
+    "enum8.ts"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/dominicvonk/enum8.git"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "vitest --typecheck",
     "lint": "eslint . --ext .ts",
     "build": "tsc"
   },
@@ -28,6 +35,7 @@
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "typescript": "^5.8.0-beta",
-    "typescript-eslint": "^8.23.0"
+    "typescript-eslint": "^8.23.0",
+    "vitest": "^3.0.5"
   }
 }
